@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="15dp" >
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="400dp"
+        android:layout_height="400dp"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/likeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageView"
+        android:layout_alignStart="@id/imageView"
+        android:layout_marginTop="15dp"
+        android:textSize="20sp" />
+
+    <CheckBox
+        android:id="@+id/likeButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/likeTextView"
+        android:layout_alignStart="@id/imageView"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/insta_like"
+        android:button="@android:color/transparent" />
+
+    <Button
+        android:id="@+id/commentButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/likeTextView"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@id/likeButton"
+        android:background="@drawable/insta_comment" />
+
+    <Button
+        android:id="@+id/msgButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/likeTextView"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@id/commentButton"
+        android:background="@drawable/insta_msg" />
+
+    <Button
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/imageView"
+        android:layout_alignEnd="@id/imageView"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/insta_bookmark" />
+
+    <TextView
+        android:id="@+id/contentView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/likeButton"
+        android:layout_alignEnd="@+id/imageView"
+        android:layout_alignStart="@id/imageView"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="20dp"
+        android:textSize="20sp" />
+
+</RelativeLayout>
