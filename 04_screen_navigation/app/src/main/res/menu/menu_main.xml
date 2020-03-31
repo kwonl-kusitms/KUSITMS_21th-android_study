@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menu_refresh"
+        android:title="홈"
+        android:icon="@drawable/home_icon"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/menu_search"
+        android:title="검색"
+        android:icon="@drawable/search_icon" />
+
+    <item
+        android:id="@+id/menu_test"
+        android:title="테스트 메뉴" />
+</menu>
