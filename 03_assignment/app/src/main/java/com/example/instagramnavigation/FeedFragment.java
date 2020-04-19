@@ -43,8 +43,6 @@ public class FeedFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
-        Log.d(TAG, "onCreateView: ");
         View rootView = inflater.inflate(R.layout.fragment_feed, container, false);
 
         ListView feedView = rootView.findViewById(R.id.feedView);

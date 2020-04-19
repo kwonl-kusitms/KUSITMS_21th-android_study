@@ -78,20 +78,6 @@ public class FeedItemAdapter extends BaseAdapter {
             }
         });
 
-        TextView largeView = view.findViewById(R.id.detailButton);
-        largeView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(context, DetailActivity.class);
-
-                intent.putExtra("imageId", feedItem.getImage());
-                intent.putExtra("content", feedItem.getContent());
-                intent.putExtra("like", feedItem.getLike());
-
-                context.startActivity(intent);
-            }
-        });
-
         return view;
     }
 }
