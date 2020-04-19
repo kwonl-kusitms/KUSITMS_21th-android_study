@@ -2,6 +2,7 @@ package com.example.instagramnavigation;
 
 import android.content.Context;
 import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,6 +18,7 @@ import org.w3c.dom.Text;
 import java.util.ArrayList;
 
 public class FeedItemAdapter extends BaseAdapter {
+    private static final String TAG = FeedItemAdapter.class.getSimpleName();
     Context context;
     ArrayList<FeedItemData> items;
 
@@ -55,7 +57,7 @@ public class FeedItemAdapter extends BaseAdapter {
         contentView.setText(feedItem.getContent());
 
         ImageView imageView = view.findViewById(R.id.imageView);
-        imageView.setImageResource(feedItem.getImageId());
+        imageView.setImageBitmap(feedItem.getImage());
 
         CheckBox likeButton = view.findViewById(R.id.likeButton);
         likeButton.setOnCheckedChangeListener(new CheckBox.OnCheckedChangeListener() {
@@ -78,12 +80,11 @@ public class FeedItemAdapter extends BaseAdapter {
 
         TextView largeView = view.findViewById(R.id.detailButton);
         largeView.setOnClickListener(new View.OnClickListener() {
-
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(context, DetailActivity.class);
 
-                intent.putExtra("imageId", feedItem.getImageId());
+                intent.putExtra("imageId", feedItem.getImage());
                 intent.putExtra("content", feedItem.getContent());
                 intent.putExtra("like", feedItem.getLike());
 

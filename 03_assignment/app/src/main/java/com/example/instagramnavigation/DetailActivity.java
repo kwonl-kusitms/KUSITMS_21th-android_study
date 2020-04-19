@@ -21,7 +21,6 @@ public class DetailActivity extends AppCompatActivity {
         Intent intent = getIntent();
 
         ((TextView) findViewById(R.id.contentView)).setText(intent.getStringExtra("content"));
-        ((ImageView) findViewById(R.id.imageView)).setImageResource(intent.getIntExtra("imageId", 0));
         ((TextView) findViewById(R.id.likeTextView)).setText(String.format("좋아요 %d개", intent.getIntExtra("like", 0)));
         findViewById(R.id.detailButton).setVisibility(View.INVISIBLE);
 
